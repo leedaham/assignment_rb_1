@@ -28,7 +28,6 @@ public class UploadController {
 
         //파일 저장 및 저장 이름 가져오기
         String savedFileName = fileService.saveFile(file);
-//        String s = fileService.storeFile(file);
 
         //응답 값 생성 및 설정
         UploadRespData uploadRespData = new UploadRespData(savedFileName);
