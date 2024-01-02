@@ -3,7 +3,7 @@
 <a href="">풀이</a>
 
 ## 과제 2
-**HashMap을 이용한 String 글자 수 카운트하기**
+**HashMap 이용한 String 글자 수 카운트하기**
 
 ## 과제 3
 **입력 데이터 500개씩 Bulk Insert 하기**
@@ -12,4 +12,4 @@
 **클래스 다이어그램**
 
 ## 과제 5
-**RestTemplate, WebClient로 API 호출하기**
+**RestTemplate, WebClient API 호출하기**
