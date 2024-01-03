@@ -1,2 +1,7 @@
 file:
   path: /Users/idaham/Downloads/redblue
+
+sms:
+  api:
+    url: https://{hostname}
+    uri: /api/sendSMS
