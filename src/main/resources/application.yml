@@ -4,6 +4,11 @@ spring:
     - config.yml
     - datasource.yml
 
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://gcp.connect.psdb.cloud/redblue?sslMode=VERIFY_IDENTITY #planetScale
+    #username, password > datasource.yml
+
   jpa:
     hibernate:
       ddl-auto: create
