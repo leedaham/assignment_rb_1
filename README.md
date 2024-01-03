@@ -60,8 +60,8 @@
     - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/SmsService.java#L40">sendSmsWithRestTemplateCall()</a>: RestTemplate Method 사용
     - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/SmsService.java#L70">sendSmsWithWebClientCall()</a>: WebClient Method 사용
   - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/CallApiService.java">CallApiService</a>: API Call Service
-    - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/CallApiService.java#L22">CallApiService</a>: RestTemplate Method
-    - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/CallApiService.java#L47">CallApiService</a>: WebClient Method
+    - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/CallApiService.java#L22">callWithRestTemplate()</a>: RestTemplate Method
+    - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/CallApiService.java#L47">callWithWebClient()</a>: WebClient Method
 - DTO:
   - <a href="">BulkInsertReq</a>: Client에게 받는 사용자 정보 객체(UserInfoDto) 리스트
   - <a href="">UserInfoDto</a>: 사용자 정보 객체, UserService에서 User(Entity)로 변환
