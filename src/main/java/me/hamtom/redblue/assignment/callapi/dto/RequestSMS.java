@@ -7,4 +7,7 @@ public class RequestSMS {
     private String title;
     private String content;
     private String targetPhoneNumber;
+
+    public RequestSMS() {
+    }
 }

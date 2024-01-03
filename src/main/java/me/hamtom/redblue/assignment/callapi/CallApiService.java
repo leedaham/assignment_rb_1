@@ -7,6 +7,7 @@ import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClientResponseException;
+import reactor.core.publisher.Mono;
 
 @Service
 public class CallApiService {
@@ -44,7 +45,7 @@ public class CallApiService {
      * @param bodyObj 요청 Body
      * @return 응답 값
      */
-    public ResponseEntity<String> callWithWebClient(String url, String uri, HttpMethod method, HttpHeaders headers, Object bodyObj) {
+    public Mono<ResponseEntity<String>> callWithWebClient(String url, String uri, HttpMethod method, HttpHeaders headers, Object bodyObj) {
         try {
             return WebClient
                     .create(url)
@@ -53,13 +54,9 @@ public class CallApiService {
                     .headers(httpHeaders -> httpHeaders.addAll(headers))
                     .bodyValue(bodyObj)
                     .retrieve()
-                    .toEntity(String.class)
-                    .block();
-        } catch (WebClientResponseException e) {
-            return new ResponseEntity<>(e.getStatusCode());
+                    .toEntity(String.class);
         } catch (Exception e) {
             throw new RuntimeException();
         }
     }
-
 }
