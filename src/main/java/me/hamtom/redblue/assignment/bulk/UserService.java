@@ -27,15 +27,15 @@ public class UserService {
         int failCount = userInfoDtos.size();
         log.info("실패 수: {}, username 값 없음", totalCount-failCount);
 
-            //UserInfDto -> User(Entity) 변환 후 한번에 넣을 List 만들기
-            List<User> batchList = userInfoDtos.stream()
-                    .map(UserInfoDto::getUsername)
-                    .map(User::createUser)
-                    .toList();
+        //UserInfDto -> User(Entity) 변환 후 한번에 넣을 List 만들기
+        List<User> batchList = userInfoDtos.stream()
+                .map(UserInfoDto::getUsername)
+                .map(User::createUser)
+                .toList();
 
-            //만들어진 BulkList insert 후 영속성 컨텍스트 비우기
-            userBatchRepository.saveAll(batchList);
-
-        return new BulkInsertResultDto(totalCount, 0, failCount);
+        //BulkList insert
+        userBatchRepository.saveAll(batchList);
+        log.info("완료");
+        return new BulkInsertResultDto(totalCount, failCount);
     }
 }
