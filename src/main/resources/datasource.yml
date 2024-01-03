@@ -1,6 +1,0 @@
-spring:
-  datasource:
-    url: gitignore
-    username: gitignore
-    password: gitignore
-    driver-class-name: com.mysql.cj.jdbc.Driver

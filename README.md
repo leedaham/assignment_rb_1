@@ -13,7 +13,7 @@
   - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/file/LookupController.java#L67">LookupController.LookupRespData</a>: 파일 조회 응답 객체
 
 ##### 공통 코드
-- 아래 [공통 코드](#공통-코드) 부분에서 확인 가능    
+- 아래 [공통](#공통) 부분에서 확인 가능    
 
 ## 과제 2
 #### HashMap 이용한 String 글자 수 카운트하기
@@ -62,5 +62,7 @@
   - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/common/response/ErrorResult.java">ErrorResult</a>: 에러 응답 객체
 - exception:
   - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/common/exception/PredictableRuntimeException.java">PredictableRuntimeException</a>: 로직 수행 중 예상할 수 있는 예외
-  - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/common/ControllerExceptionHandler.java">ControllerExceptionHandler</a>: Exception 발생 시 응답 핸들링s
+  - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/common/ControllerExceptionHandler.java">ControllerExceptionHandler</a>: Exception 발생 시 응답 핸들링
+- config:
+  - <a href="">config.yml</a>
 
