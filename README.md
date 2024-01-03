@@ -64,5 +64,5 @@
   - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/common/exception/PredictableRuntimeException.java">PredictableRuntimeException</a>: 로직 수행 중 예상할 수 있는 예외
   - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/common/ControllerExceptionHandler.java">ControllerExceptionHandler</a>: Exception 발생 시 응답 핸들링
 - config:
-  - <a href="">config.yml</a>
+  - <a href="ss">config.yml</a>
 
