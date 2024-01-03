@@ -6,14 +6,21 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://gcp.connect.psdb.cloud/redblue?sslMode=VERIFY_IDENTITY #planetScale
+    url: jdbc:mysql://gcp.connect.psdb.cloud/redblue?sslMode=VERIFY_IDENTITY&profileSQL=true&logger=Slf4JLogger&maxQuerySizeToLog=1000 #planetScale
     #username, password > datasource.yml
+    hikari:
+      data-source-properties:
+        rewriteBatchedStatements: true
+
 
   jpa:
     hibernate:
       ddl-auto: create
     properties:
       hibernate:
+#        jdbc.batch_size: 100
+#        order_inserts: true
+#        order_updates: true
         show_sql: true
         #format_sql: true
 
