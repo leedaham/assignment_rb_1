@@ -44,7 +44,7 @@
   - <a href="">User</a>: User Entity
 
 ##### 공통 코드
-- 아래 [공통 코드](#공통-코드) 부분에서 확인 가능
+- 아래 [공통](#공통) 부분에서 확인 가능
 
 ## 과제 4
 #### 클래스 다이어그램
@@ -53,7 +53,7 @@
 #### RestTemplate, WebClient API 호출하기
 
 
-### 공통 코드
+### 공통
 - package:
   - <a href="https://github.com/leedaham/assignment_rb_1/tree/master/src/main/java/me/hamtom/redblue/assignment/common">me.hamtom.redblue.assignment.common</a>
 - response:
