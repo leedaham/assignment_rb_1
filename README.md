@@ -63,13 +63,8 @@
     - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/CallApiService.java#L22">callWithRestTemplate()</a>: RestTemplate Method
     - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/CallApiService.java#L47">callWithWebClient()</a>: WebClient Method
 - DTO:
-  - <a href="">BulkInsertReq</a>: Client에게 받는 사용자 정보 객체(UserInfoDto) 리스트
-  - <a href="">UserInfoDto</a>: 사용자 정보 객체, UserService에서 User(Entity)로 변환
-  - <a href="">BulkInsertResultDto</a>: 파일 업로드 응답 객체
-- Repository:
-  - <a href="">UserRepository</a>: User Entity Repository
-- Entity:
-  - <a href="">User</a>: User Entity
+  - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/dto/RequestSMS.java">RequestSMS</a>: API 요청 객체
+  - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/dto/ResponseSMS.java">ResponseSMS</a>: API 응답 객체
 
 ##### 공통 코드
 - 아래 [공통](#공통) 부분에서 확인 가능
