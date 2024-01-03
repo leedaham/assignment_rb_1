@@ -1,12 +1,9 @@
 spring:
   config:
-    import: config.yml
+    import:
+    - config.yml
+    - datasource.yml
 
-  datasource:
-    url: jdbc:mysql://gcp.connect.psdb.cloud:3306/redblue?useUnicode=true&serverTimezone=Asia/Seoul
-    username: nazgoeavvvh5jfjc9z07
-    password: pscale_pw_zSvH2anvCRCTPXnh9pBvyCALGfjQzb0ZgUwNodkODOr
-    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: create
