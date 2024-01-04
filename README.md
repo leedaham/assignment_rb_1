@@ -48,6 +48,12 @@
 
 ## 과제 4
 #### 클래스 다이어그램
+> Client -> Controller -> ReservationRequestService -> ProducerService -> Queue  
+> Queue -> ConsumerService -> ReservationProcessService
+
+- <a href="">package 클래스 다이어그램 이미지</a>
+- <a href="">mq 클래스 다이어그램 이미지</a>
+- <a href="">entity 클래스 다이어그램 이미지</a>
 
 ## 과제 5
 #### RestTemplate, WebClient API 호출하기
@@ -60,8 +66,7 @@
   - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/SmsService.java">SmsService</a>: SMS 전송 Service
     - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/SmsService.java#L22">Request 정보 정의</a>: URL, URI, HttpMethod, Header, Body
     - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/SmsService.java#L45">sendSmsWithRestTemplateCall()</a>: RestTemplate Method 사용
-    - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/SmsService.java#L83">sendSmsWithWebClientCallSubscribe()</a>: WebClient Method 사용
-    - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/SmsService.java#L106">sendSmsWithWebClientCallBlock()</a>: WebClient Method 사용
+    - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/SmsService.java#L83">sendSmsWithWebClientCall()</a>: WebClient Method 사용
   - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/CallApiService.java">CallApiService</a>: API Call Service
     - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/CallApiService.java#L22">callWithRestTemplate()</a>: RestTemplate Method
     - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/callapi/CallApiService.java#L47">callWithWebClient()</a>: WebClient Method
