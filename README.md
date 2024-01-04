@@ -49,15 +49,16 @@
 ## 과제 4
 #### 클래스 다이어그램
 > Client -> Controller -> ReservationRequestService -> ProducerService -> Queue  
-> Queue -> ConsumerService -> ReservationProcessService
+> Queue -> ConsumerService -> ReservationProcessService  
 
+**아래 링크 클릭하시면 이미지 확인 할 수 있습니다.**
 - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/diagram/reservationPackage.png">package 클래스 다이어그램 이미지</a>
 - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/diagram/mqPackage.png">mq 클래스 다이어그램 이미지</a>
-- <a href="https://github.com/leedaham/assignment_rb_1/blob/master/diagram/entityPackage.png">entity 클래스 다이어그램 이미램</a>
+- <a href="https://github.com/leedaham/assignment_rb_1/blob/master/diagram/entityPackage.png">entity 클래스 다이어그램 이미지</a>
 
 ## 과제 5
 #### RestTemplate, WebClient API 호출하기
-> **<a href="https://github.com/leedaham/assignment_rb_1/blob/master/RestTemplateWebClient_%EC%B0%A8%EC%9D%B4%EC%A0%90.md">RestTemplate, WebClient 차이점</a>** <- 클릭 부탁드립니다.
+>**<a href="https://github.com/leedaham/assignment_rb_1/blob/master/RestTemplateWebClient_%EC%B0%A8%EC%9D%B4%EC%A0%90.md">RestTemplate, WebClient 차이점</a> <- 클릭하시면 확인할 수 있습니다.**
 
 ##### 관련 코드
 - package:
