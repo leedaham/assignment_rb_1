@@ -51,9 +51,9 @@
 > Client -> Controller -> ReservationRequestService -> ProducerService -> Queue  
 > Queue -> ConsumerService -> ReservationProcessService
 
-- <a href="">package 클래스 다이어그램 이미지</a>
-- <a href="">mq 클래스 다이어그램 이미지</a>
-- <a href="">entity 클래스 다이어그램 이미지</a>
+- <a href="https://github.com/leedaham/assignment_rb_1/blob/master/diagram/reservationPackage.png">package 클래스 다이어그램 이미지</a>
+- <a href="https://github.com/leedaham/assignment_rb_1/blob/master/diagram/mqPackage.png">mq 클래스 다이어그램 이미지</a>
+- <a href="https://github.com/leedaham/assignment_rb_1/blob/master/diagram/entityPackage.png">entity 클래스 다이어그램 이미램</a>
 
 ## 과제 5
 #### RestTemplate, WebClient API 호출하기
