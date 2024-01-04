@@ -80,7 +80,7 @@ public class SmsService {
     /**
      * WebClient API 호출 (비동기)
      */
-    public Mono<ResponseSMS> sendSmsWithWebClientCallSubscribe(){
+    public Mono<ResponseSMS> sendSmsWithWebClientCall(){
         log.info("sendSMS[WebClient] req, fullUrl: {}, method: {}, body: {}]", url+uri, SEND_SMS_HTTP_METHOD, requestSMS);
         Mono<ResponseEntity<String>> responseEntityMono = callApiService.callWithWebClient(url, uri, SEND_SMS_HTTP_METHOD, headers, requestSMS);
         ObjectMapper mapper = new ObjectMapper();
@@ -98,43 +98,6 @@ public class SmsService {
             log.info("sendSMS[WebClient] resp, code: {}, body: {}]", HttpStatusCode.valueOf(200), s);
         });
         return result;
-    }
-
-    /**
-     * WebClient API 호출 (동기)
-     */
-    public ResponseSMS sendSmsWithWebClientCallBlock() throws JsonProcessingException {
-        log.info("sendSMS[WebClient] req, fullUrl: {}, method: {}, body: {}]", url+uri, SEND_SMS_HTTP_METHOD, requestSMS);
-
-        //호출 및 응답
-        Mono<ResponseEntity<String>> responseEntityMono = callApiService.callWithWebClient(url, uri, SEND_SMS_HTTP_METHOD, headers, requestSMS);
-        ResponseEntity<String> response = responseEntityMono.block();
-
-        //응답 확인
-        HttpStatusCode responseStatusCode = response.getStatusCode();
-        if (responseStatusCode.isSameCodeAs(HttpStatusCode.valueOf(200))) {
-
-            String body = response.getBody();
-            ObjectMapper mapper = new ObjectMapper();
-            log.info("sendSMS[WebClient] resp, code: {}, body: {}]", responseStatusCode, body);
-
-            return mapper.readValue(body, ResponseSMS.class);
-
-        } else if (
-                responseStatusCode.isSameCodeAs(HttpStatusCode.valueOf(403))
-                || responseStatusCode.isSameCodeAs(HttpStatusCode.valueOf(404))
-                || responseStatusCode.isSameCodeAs(HttpStatusCode.valueOf(500))
-        ) {
-
-            log.warn("sendSMS[WebClient] resp, error: {}]", responseStatusCode);
-            throw new PredictableRuntimeException("오류가 발생했습니다. HttpStatus: " + responseStatusCode);
-
-        } else {
-
-            log.warn("sendSMS[WebClient] resp, error: {}]", responseStatusCode);
-            throw new RuntimeException();
-
-        }
     }
 
 }
