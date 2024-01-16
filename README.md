@@ -1,4 +1,3 @@
-## 과제 1
 #### MultipartFile 업로드 및 조회하기
 ##### 관련 코드
 - package:
@@ -15,15 +14,13 @@
 ##### 공통 코드
 - 아래 [공통](#공통) 부분에서 확인 가능    
 
-## 과제 2
 #### HashMap 이용한 String 글자 수 카운트하기
 ##### 관련 코드
 - package:
   - <a href="https://github.com/leedaham/assignment_rb_1/tree/master/src/main/java/me/hamtom/redblue/assignment/hashmap">me.hamtom.redblue.assignment.hashmap</a>
 - Class:
   - <a href="https://github.com/leedaham/assignment_rb_1/blob/master/src/main/java/me/hamtom/redblue/assignment/hashmap/HashMapCountString.java">HashMapCountString</a>: HashMap을 이용하여 String의 각 글자 수를 카운트하는 Method 구현
-    
-## 과제 3
+
 #### 입력 데이터 500개씩 Bulk Insert 하기
 > 전달 받을 정보: 사용자 기본 정보 (username)  
 > 저장 테이블: Users (Entity: User)
@@ -46,20 +43,8 @@
 ##### 공통 코드
 - 아래 [공통](#공통) 부분에서 확인 가능
 
-## 과제 4
-#### 클래스 다이어그램
-> Client -> Controller -> ReservationRequestService -> ProducerService -> Queue  
-> Queue -> ConsumerService -> ReservationProcessService  
 
-**아래 링크 클릭하시면 이미지 확인 할 수 있습니다.**
-- <a href="https://github.com/leedaham/assignment_rb_1/blob/master/diagram/reservationPackage.png">package 클래스 다이어그램 이미지</a>
-- <a href="https://github.com/leedaham/assignment_rb_1/blob/master/diagram/mqPackage.png">mq 클래스 다이어그램 이미지</a>
-- <a href="https://github.com/leedaham/assignment_rb_1/blob/master/diagram/entityPackage.png">entity 클래스 다이어그램 이미지</a>
-
-## 과제 5
 #### RestTemplate, WebClient API 호출하기
->**<a href="https://github.com/leedaham/assignment_rb_1/blob/master/RestTemplateWebClient_%EC%B0%A8%EC%9D%B4%EC%A0%90.md">RestTemplate, WebClient 차이점</a> <- 클릭하시면 확인할 수 있습니다.**
-
 ##### 관련 코드
 - package:
   - <a href="https://github.com/leedaham/assignment_rb_1/tree/master/src/main/java/me/hamtom/redblue/assignment/callapi">me.hamtom.redblue.assignment.callapi</a>
