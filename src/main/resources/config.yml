@@ -3,5 +3,7 @@ file:
 
 sms:
   api:
-    url: https://{hostname}
+#    url: https://{hostname}
+#    uri: /api/sendSMS
+    url: https://ec1bdbbb-ad96-4c1c-b004-64a18d3a0f64.mock.pstmn.io
     uri: /api/sendSMS
