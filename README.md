@@ -1,3 +1,122 @@
+
+
+# 2023 Coding Test
+
+## 요구사항
+
+### 1. 파일 업로드 및 조회 API
+
+- **환경**: Java + Spring Boot
+- **형태**: RESTful API
+- **기능**:
+    - POST Multipart로 이미지 파일(jpg, png 등)을 서버 로컬 파일 스토리지에 업로드
+    - 파일명을 기반으로 이미지를 조회하여 `<img src="...">` 태그로 브라우저에서 표시 가능하게 구현
+- **구조**: Controller, Service, Dto, VO 체계
+
+---
+
+### 2. 문자열 글자 수 세기
+
+- HashMap을 이용하여 문자열(String)의 글자 수를 카운트하는 Java Method 작성
+
+---
+
+### 3. JSON 입력값을 Bulk Insert
+
+- **입력**: JSON으로 전달받은 데이터
+- **요구사항**:
+    - 500건마다 bulk로 Insert 처리
+    - DB: MySQL
+    - ORM: MyBatis 또는 JPA 중 선택 가능
+
+---
+
+### 4. 동시접속 예약 처리 API 설계
+
+#### 예약 프로세스
+
+1. 사용 가능한 티켓 보유 확인 (없으면 에러)
+2. Queue에 적재
+3. Queue에서 읽어 예약 처리 (트랜잭션 보장)
+4. 티켓 사용 수 차감
+5. 그룹수업 좌석수 차감
+6. 예약 내역 기록
+
+- **사용 Queue**: AWS SQS 또는 RabbitMQ
+
+---
+
+### 5. 데이터 모델 (클래스 다이어그램 제출 대상)
+
+#### 예약 티켓 테이블 (ticket)
+
+| 필드명       | 타입    | 설명                         |
+|--------------|---------|------------------------------|
+| seq_ticket   | bigint  | 순번 예약번호                |
+| reservation_unit | int(3) | 1~999, 예약가능 좌석 수     |
+| ower_id      | bigint  | 소유자 ID                    |
+| used_number  | int(3)  | 예약에 사용된 좌석 수        |
+
+#### 그룹수업 내역 (group_lesson)
+
+| 필드명             | 타입    | 설명                 |
+|--------------------|---------|----------------------|
+| seq_group_lesson   | bigint  | 그룹수업 순번        |
+| total_seat_number  | int     | 좌석번호 (1~99999)   |
+| occupied_number    | bigint  | 예약 완료된 좌석 수  |
+
+#### 예약 내역 (reservation)
+
+| 필드명       | 타입      | 설명                       |
+|--------------|-----------|----------------------------|
+| seq_schedule | bigint    | 예약 순번                  |
+| owner_id     | bigint    | 예약자 고유번호            |
+| seat_number  | seat_number | 예약 좌석 번호           |
+| reg_dtm      | datetime  | 예약 일시                  |
+| seq_ticket   | bigint    | 예약 시 사용한 티켓 번호   |
+
+---
+
+### 6. 외부 REST API 호출 - SMS 전송
+
+- **Endpoint**: `https://{hostname}/api/sendSMS`
+- **Method**: POST
+- **Content-Type**: JSON
+- **Authorization**: Bearer Token (Authorization Header 사용)
+
+#### Request 예시
+
+```json
+{
+  "title": "SMS Title 샘플",
+  "content": "안녕하세요! SMS 샘플 테스트입니다.",
+  "targetPhoneNumber": "+82-10-1234-1234"
+}
+```
+
+#### Response
+
+- **HTTP Status**: 200 OK
+- **Body**:
+```json
+{
+  "message": "Successfully sent"
+}
+```
+
+#### 예외 상태
+
+- HTTP Status: 403, 404, 500
+
+#### 구현 요구
+
+- RestTemplate, WebClient를 각각 사용한 구현
+- 두 방식의 차이점 설명 포함
+
+---
+
+# 과제 풀이
+
 #### MultipartFile 업로드 및 조회하기
 ##### 관련 코드
 - package:
